@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='styles.css' type='text/css'>
+    <title>csStrat</title>
+</head>
+
+<body>
+    <div class='main'>
+        <div class='header'>
+            <img class='logo' src='img/csstrat.png'>
+        </div>
+        <div class='canvas'>
+            <canvas id='canvas'></canvas>
+        </div>
+        <div class='buttonbox'>
+            <a class='button' onclick="changeMap('cache')">Cache</a>
+            <a class='button' onclick="changeMap('mirage')">Mirage</a>
+            <a class='button' onclick="changeMap('dust2')">Dust 2</a>
+            <a class='button' onclick="changeMap('inferno')">Inferno</a>
+            <a class='button' onclick="changeMap('nuke')">Nuke</a>
+            <a class='button' onclick="changeMap('overpass')">Overpass</a>
+            <a class='button' onclick="changeMap('train')">Train</a>
+            <a class='button clearbutton' onclick="clearMap()">Clear</a>
+
+
+        </div>
+
+        <div class='toolbox'>
+            <a class='button ctbutton' onclick="colorPicker('#243e75')">Counter-Terrorist</a>
+            <a class='button tbutton' onclick="colorPicker('#dbc06e')">Terrorist</a>
+            <a class='button smokebutton' onclick="colorPicker('#bababa')">Smoke</a>
+            <a class='button defaultbutton' onclick="colorPicker('#000000')">Default</a>
+
+        </div>
+        <div class='importbox'>
+
+            <a class='button importbutton' onclick="download1(getDataurl(), 'strategy.jpeg')">Export</a>
+        </div>
+
+
+
+
+
+    </div>
+    <script src='/socket.io/socket.io.js'></script>
+    <script src='script.js'></script>
+</body>
+
+</html>
