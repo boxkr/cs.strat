@@ -99,6 +99,11 @@ function changeMap(map) {
     */
 
     background.src = 'mapImg/' + mapName + '.png';
+    socket.emit('mapchange', background.src);
+    socket.on('mapchange', (map) => {
+        background.src = map;
+    })
+
     ctx.drawImage(background, 0, 0)
 
 
@@ -107,6 +112,8 @@ function changeMap(map) {
     //causes blank beginning
     canvas.width = background.width;
     canvas.height = background.height;
+
+
 
 
 

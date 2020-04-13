@@ -20,5 +20,10 @@ io.on('connection', (socket) => {
         //console.log(mouseObject);
     });
 
+    //on map change
+    socket.on('mapchange', (map) => {
+        socket.broadcast.emit('mapchange', map);
+    })
+
 
 });
