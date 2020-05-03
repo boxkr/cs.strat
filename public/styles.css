@@ -112,3 +112,9 @@ body {
     color: #24c43a;
     padding:15px 45px;
 }
+
+.serverbutton {
+    color: #ffaaaa;
+    padding:15px 45px;
+    visibility: visible;
+}

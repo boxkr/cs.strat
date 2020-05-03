@@ -2,6 +2,7 @@ var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 let mapClickCount = 0;
 let socket = io();
+let serverPath = 'None';
 
 //canvas.width = 1000;
 //canvas.height = 1000;
@@ -73,7 +74,7 @@ function mainLoop(time) {
         ctx.moveTo(mouse.lastX, mouse.lastY);
         ctx.lineTo(mouse.x, mouse.y);
         ctx.stroke()
-        socket.emit('drawing', mouse)
+        socket.emit('drawing', { data: mouse, room: serverPath })
 
     }
 
@@ -99,7 +100,7 @@ function changeMap(map) {
     */
 
     background.src = 'mapImg/' + mapName + '.png';
-    socket.emit('mapchange', background.src);
+    socket.emit('mapchange', { data: background.src, room: serverPath });
     socket.on('mapchange', (map) => {
         background.src = map;
     })
@@ -173,5 +174,12 @@ socket.on('drawing', (data) => {
     ctx.lineTo(data.x, data.y);
     ctx.stroke()
 })
+
+function changeServer(path) {
+
+    socket.emit('serverchange', { new: path, old: serverPath })
+    serverPath = path;
+
+}
 
 requestAnimationFrame(mainLoop)
