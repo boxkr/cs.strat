@@ -118,3 +118,26 @@ body {
     padding:15px 45px;
     visibility: visible;
 }
+
+
+.serverbox {
+    display: flex;
+    visibility: hidden;
+    margin-top: 15px;
+    /*background-color: greenyellow;*/
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.activeserver {
+    color: #ff3232;
+    background-color: #d62e2e9a;
+    box-shadow: 3px 4px 0px 0px #899599;
+	background:linear-gradient(to bottom, #ca60603f 5%, #d62e2e31 100%);
+}
+
+.activeserver:hover {
+
+    background:linear-gradient(to bottom, #ca606077 5%, #d12c2c62 100%);
+    background-color: #d62e2e31;
+}

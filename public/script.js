@@ -175,11 +175,20 @@ socket.on('drawing', (data) => {
     ctx.stroke()
 })
 
-function changeServer(path) {
+function changeServer(path, elem) {
 
+    //change server
     socket.emit('serverchange', { new: path, old: serverPath })
     serverPath = path;
 
+    //change active element
+    let a = document.getElementsByTagName('a');
+    for (let i = 0; i < a.length; i++) {
+        a[i].classList.remove('activeserver');
+    }
+    elem.classList.add('activeserver')
+
 }
+
 
 requestAnimationFrame(mainLoop)

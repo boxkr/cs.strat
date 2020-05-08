@@ -41,12 +41,12 @@
 
             <a class='button importbutton' onclick="download1(getDataurl(), 'strategy.jpeg')">Export</a>
         </div>
-        <div class='importbox'>
-            <a class='button serverbutton' onclick="changeServer('room1')">Server 1</a>
-            <a class='button serverbutton' onclick="changeServer('room2')">Server 2</a>
-            <a class='button serverbutton' onclick="changeServer('room3')">Server 3</a>
-            <a class='button serverbutton' onclick="changeServer('room4')">Server 4</a>
-            <a class='button serverbutton' onclick="changeServer('room5')">Server 5</a>
+        <div class='serverbox' id='serverbox'>
+            <a class='button serverbutton' id='server1' onclick="changeServer('room1', this)">Server 1</a>
+            <a class='button serverbutton' id='server2' onclick="changeServer('room2', this)">Server 2</a>
+            <a class='button serverbutton' id='server3' onclick="changeServer('room3', this)">Server 3</a>
+            <a class='button serverbutton' id='server4' onclick="changeServer('room4', this)">Server 4</a>
+            <a class='button serverbutton' id='server5' onclick="changeServer('room5', this)">Server 5</a>
         </div>
 
 
