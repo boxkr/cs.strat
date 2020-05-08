@@ -133,7 +133,7 @@ body {
     color: #ff3232;
     background-color: #d62e2e9a;
     box-shadow: 3px 4px 0px 0px #899599;
-	background:linear-gradient(to bottom, #ca60603f 5%, #d62e2e31 100%);
+	background:linear-gradient(to bottom, #ca606060 5%, #d62e2e49 100%);
 }
 
 .activeserver:hover {
