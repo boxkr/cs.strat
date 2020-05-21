@@ -12,9 +12,9 @@ Upon joining you need to choose a server, then click on the map you wish to draw
 [scene2]: https://github.com/boxkr/cs.strat/blob/master/etc/cs2.gif "Scene 2"
 
 
-[]![scene1]
+![scene1]
 
-[]![scene2]
+![scene2]
 
 Once you're done, you or your teammates my download the current strat-board by clicking **export**
 
