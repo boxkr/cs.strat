@@ -16,7 +16,7 @@ Upon joining you need to choose a server, then click on the map you wish to draw
 
 ![scene2]
 
-Once you're done, you or your teammates my download the current strat-board by clicking **export**
+Once you're done, you or your teammates may download the current strat-board by clicking **export**
 
 
 
